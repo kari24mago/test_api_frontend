@@ -24,7 +24,8 @@ class listComponent extends React.Component  {
     }
 
     loadLicense(){        
-        axios.get("http://localhost:3000/licencia/list")
+        // axios.get("http://localhost:3000/licencia/list")
+        axios.get(process.env.REACT_APP_API_URL)
         .then(res => {
           // console.log (res.data);
           if (res.data.data) {
@@ -132,7 +133,8 @@ class listComponent extends React.Component  {
   }
 
   sendDelete(userId){
-    const baseUrl = "http://localhost:3000/licencia/delete"; // URL de backend
+    // const baseUrl = "http://localhost:3000/licencia/delete"; // URL de backend
+    const baseUrl = process.env.REACT_APP_API_URL
     axios.post(baseUrl,{ // la red
       id:userId
     })
