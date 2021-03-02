@@ -79,6 +79,8 @@ class listComponent extends React.Component  {
 
   loadFillData(){ //cargando datos
     return this.state.listLicense.map((data)=>{
+      console.log("Log 1: "+this.state);
+      console.log("Log 2: "+this.state.listLicense);
       return(
         <tr>
           <th>{data.id}</th>
