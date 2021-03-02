@@ -36,7 +36,7 @@ class EditComponent extends React.Component{
     componentDidMount(){
         let userId = this.props.match.params.licenseId; //parametros de id de usuario
         // const url = "http://localhost:3000/licencia/get/"+userId;
-        const url = process.env.REACT_APP_API_URL+userId;
+        const url = process.env.REACT_APP_API_URL+"/licencia/get/"+userId;
         
         // console.log("**--> url final: "+url);
         axios.get(url)
@@ -214,7 +214,7 @@ class EditComponent extends React.Component{
     console.log('id que se envia en editar: '+userId);
     // url de backend
     // const baseUrl = "http://localhost:3000/licencia/update/"+userId;
-    const baseUrl = process.env.REACT_APP_API_URL+userId;
+    const baseUrl = process.env.REACT_APP_API_URL+"/licencia/update/"+userId;
     // parametros de datos post
     const datapost = {
         codigo : this.state.campCodigo,

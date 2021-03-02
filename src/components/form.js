@@ -167,7 +167,7 @@ class EditComponent extends React.Component{
     else {
       //url del archivo nodeJS en Backend
     //   const baseUrl = "http://localhost:3000/licencia/create";
-      const baseUrl = process.env.REACT_APP_API_URL;
+      const baseUrl = process.env.REACT_APP_API_URL+"/licencia/create";
  
       //parametros de los datos de la tabla licencia
       const datapost = {
